@@ -1,0 +1,24 @@
+[14:05:32] SAAM.Train: 1.6.0+cu101
+[14:05:32] SAAM.Train: TIME RIGHT NOW!: 2024-05-15 14:05:32.103107
+[14:05:32] SAAM.Train: Loading the datasets...
+[14:05:33] SAAM.Train: Not using cuda...
+[14:05:33] SAAM.Train: Loading complete.
+[14:05:33] SAAM.Train: Model: 
+Net(
+  (embedding): Embedding(50, 20)
+  (lstm): LSTM(25, 40, num_layers=3, dropout=0.1)
+  (attn): SA_module(
+    (attn_l): Linear(in_features=240, out_features=120, bias=True)
+    (sig): Sigmoid()
+    (attn_g_dim_change): Linear(in_features=97, out_features=120, bias=True)
+    (attn_g): Linear(in_features=240, out_features=120, bias=True)
+  )
+  (relu): ReLU()
+  (distribution_mu): Linear(in_features=120, out_features=1, bias=True)
+  (distribution_presigma): Linear(in_features=120, out_features=1, bias=True)
+  (distribution_sigma): Softplus(beta=1, threshold=20)
+)
+[14:05:33] SAAM.Train: 107802
+[14:05:33] SAAM.Train: Starting training for 100 epoch(s)
+[14:05:33] SAAM.Train: begin training and evaluation
+[14:05:33] SAAM.Train: Epoch 1/100
